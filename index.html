@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            /* background-color: #f5f5f5; */
+        }
+        .header {
+            background-color: red;
+            color: white;
+            padding: 15px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .profile {
+            background-color: rgb(246, 244, 244);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .profile img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid #ddd;
+        }
+        .profile p:last-child {
+            color: rgba(0, 0, 0, 0.5);
+        }
+
+        .settings-container {
+            text-align: left;
+            padding: 0 20px;
+            margin-top: 20px;
+            background-color: white;
+        }
+        .settings-heading {
+            font-size: 14px;
+            color: #726d6d;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            font-weight: bold ;
+        }
+        .settings-heading::after {
+            content: "";
+            flex-grow: 1;
+            height: 1px;
+            background-color: #ddd;
+            margin-left: 10px;
+        }
+
+        /* Updated layout for settings icons */
+        .settings {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+            background-color: white;
+            width: 80%;
+            margin: 0 auto;
+        }
+        .settings div {
+            text-align: center;
+        }
+        .settings img {
+            width: 50px;
+            height: 50px;
+        }
+
+        /* Positioning the Logout icon under the first icon (Session) */
+        .settings div:nth-child(4) {
+            grid-column: 1;
+            grid-row: 2;
+        }
+
+        .bottom-nav {
+            display: flex;
+            justify-content: space-around;
+            background: white;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .bottom-nav div {
+            text-align: center;
+        }
+        .bottom-nav img {
+            width: 25px;
+            height: 25px;
+        }
+       
+         .settings p, .bottom-nav p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Profile</div>
+    <div class="profile">
+        <img src="profile.jpg" alt="Profile Picture">
+        <h3>ARSHDEEP SINGH </h3>
+        <b><p style="color: black;">Roll No: 2210997048, 2022-BCA-6 SEM 6 SEM-1 A</p></b>
+        <p>Profile</p>
+    </div>
+
+    <div class="settings-container">
+        <div class="settings-heading">SETTINGS</div>
+    </div>
+
+    <div class="settings">
+        <div>
+            <img src="session.png" alt="Session">
+           <p>Session</p>
+        </div>
+        <div>
+            <img src="password.png" alt="Change Password">
+            <p>Change Password</p>
+        </div>
+        <div>
+            <img src="shield.png" alt="Privacy" id="privacy">
+            <p>Privacy</p>
+        </div>
+        <div>
+            <img src="logout.png" alt="Logout">
+            <p>Logout</p>
+        </div>
+    </div>
+
+    <div class="bottom-nav">
+        <div>
+            <img src="home.png" alt="Home">
+            <p>Home</p>
+        </div>
+        <div>
+            <img src="messages.png" alt="Messages">
+            <p>Messages</p>
+        </div>
+        <div>
+            <img src="notifications.png" alt="Notifications">
+            <p>Notifications</p>
+        </div>
+        <div>
+            <img src="menu.png" alt="Menu">
+            <p>Menu</p>
+        </div>
+    </div>
+</body>
+</html>
